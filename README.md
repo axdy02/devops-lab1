@@ -15,3 +15,5 @@ Sample Python application created for practicing Git, GitHub and Jenkins CI/CD.
 1. Build
 2. Test
 3. Deploy
+
+Automated Jenkins build verified.
