@@ -1,0 +1,41 @@
+LAB 1 - DEVOPS FOUNDATIONS AND CONTINUOUS INTEGRATION
+
+Ubuntu Verification:
+lsb_release -a
+systemctl is-system-running
+
+Git:
+git --version
+git config --global user.name "Ansh Kapoor"
+git config --global user.email "<email>"
+git init
+git branch -M main
+git add .
+git commit -m "Initial Python application setup"
+git switch -c feature-tests
+git commit -m "Add unit tests with pytest"
+git switch main
+git merge feature-tests
+git switch -c docs-update
+git switch main
+git merge docs-update
+git remote add origin https://github.com/axdy02/devops-lab1.git
+git push -u origin main
+
+Python:
+python3 app.py
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pytest -v
+
+Jenkins:
+jenkins --version
+systemctl status jenkins
+http://localhost:8080
+
+Pipeline:
+Build -> Test -> Deploy
+
+Repository:
+https://github.com/axdy02/devops-lab1
